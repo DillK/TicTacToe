@@ -1,3 +1,6 @@
+# **Disclaimer**
+>*Disclaimer: **This is not a tutorial**. I am decidedly not an expert. While I do my best to strive for best practices, I do not guarantee them. I'm writing this simply as a means of journaling my own development. I will try to make this document as informative as I can. However, this should not be treated as anything more than the ramblings of a lunatic with a \[D]ill-informed opinion. If other people find this useful though − great!*
+
 <h1>Overview</h1>
 This post is most certainly not a tutorial. I would say it has been more of a well documented accounting of my slow descent into madness. Reader be advised - this isn't going to be easy reading to follow. Don't do what I do. Don't be lazy, just do it the right way the first time. It would have saved me a ton of time.
 
@@ -321,4 +324,19 @@ Lastly, I cannot in good conscience leave the project in this state as something
 
 Anyway, this has been a fun exercise in frustration. If you made it this far, thanks for reading!
 
-Have a good one!👋
+Be sure to check out the source at [GitHub](https://github.com/DillK/TicTacToe).
+
+Read more posts like this on [kdill.ca](https://kdill.ca)
+
+Thanks for reading!
+
+Kev
+
+# **MIT License**
+>Copyright © 2020 Kevin Dill, kdill.ca
+>
+>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+>
+>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+>
+>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

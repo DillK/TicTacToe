@@ -1,5 +1,8 @@
+# **Disclaimer**
+>*Disclaimer: **This is not a tutorial**. I am decidedly not an expert. While I do my best to strive for best practices, I do not guarantee them. I'm writing this simply as a means of journaling my own development. I will try to make this document as informative as I can. However, this should not be treated as anything more than the ramblings of a lunatic with a \[D]ill-informed opinion. If other people find this useful though − great!*
+
 # Overview
-As a programming excercise I decided to brush up on some web development. Specifically I wanted to take a closer look at HTML / JavaScript / CSS / Canvas. I needed a simple project to give them a try, and what is simpler than the age old game Tic Tac Toe? Whilst <b>this is not a tutorial <i>per se</i></b>, I have every intention of writing very detailed comments and accounts documenting my efforts. If others find it useful? Well than that's 🔥<b>LIT</b>🔥
+As a programming exercise I decided to brush up on some web development. Specifically I wanted to take a closer look at HTML / JavaScript / CSS / Canvas. I needed a simple project to give them a try, and what is simpler than the age old game Tic Tac Toe? Whilst <b>this is not a tutorial <i>per se</i></b>, I have every intention of writing very detailed comments and accounts documenting my efforts. If others find it useful? Well than that's 🔥<b>LIT</b>🔥
 
 # Goals
 1. [x] Write a playable game of Tic Tac Toe.
@@ -818,4 +821,19 @@ This was a fun little excercise. There were a few things I think I would have ch
 
 I may do a follow up post adding in those extra features. This is a good stopping place for now though. If you're reading this, thanks for your interest! Check out some of my other work at [kdill.ca](https://kdill.ca).
 
-Have a good one!
+Be sure to check out the source at [GitHub](https://github.com/DillK/TicTacToe).
+
+Read more posts like this on [kdill.ca](https://kdill.ca)
+
+Thanks for reading!
+
+Kev
+
+# **MIT License**
+>Copyright © 2020 Kevin Dill, kdill.ca
+>
+>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+>
+>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+>
+>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
