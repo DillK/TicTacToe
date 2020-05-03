@@ -1,0 +1,13 @@
+.boards{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.game-pieces{
+  z-index: 0;
+}
+
+.game-grid{
+  z-index: 1;
+}

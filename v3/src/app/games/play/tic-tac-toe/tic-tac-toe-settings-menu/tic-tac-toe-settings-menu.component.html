@@ -1,0 +1,54 @@
+<div class="settings-menu">
+
+  <div class="settings-header">
+    <div class="settings-label">
+      <mat-icon>settings</mat-icon>
+      <span>
+        Settings
+      </span>
+    </div>
+    <button mat-mini-fab [mat-dialog-close] cdkFocusInitial color="primary">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+
+  <mat-dialog-content class="settings-content">
+
+    <mat-divider class="divider"></mat-divider>
+
+    <mat-slide-toggle class="example-margin" color="primary" [(ngModel)]="gamesMediator.isAnimationEnabled">
+      Enable Animations
+    </mat-slide-toggle>
+
+    <br>
+    <br>
+
+    <mat-slide-toggle class="example-margin" color="primary" [disabled]="!gamesMediator.isAnimationEnabled"
+      [(ngModel)]="gamesMediator.useSmoothAnimation">
+      Use Smooth Animations
+    </mat-slide-toggle>
+
+    <mat-divider class="divider"></mat-divider>
+
+    <div class="settings-grid-slider-container">
+      <label>Grid Size</label>
+      <mat-slider [max]="10" [min]="3" [step]="1" [thumbLabel]="true" [tickInterval]="1" [(ngModel)]="gridSize"
+        [vertical]="false" color="primary" class="settings-grid-slider">
+      </mat-slider>
+      <label><small><em>Changing grid size resets the game</em></small></label>
+    </div>
+
+    <mat-divider class="divider"></mat-divider>
+
+    <label id="example-radio-group-label">Select AI difficulty</label>
+    <mat-radio-group class="difficulty-radio-group" [(ngModel)]="difficulty">
+      <mat-radio-button class="difficulty-radio-button" *ngFor="let diff of difficulties" [value]="diff"
+        color="primary">
+        {{diff}}
+      </mat-radio-button>
+    </mat-radio-group>
+
+    <mat-divider class="divider"></mat-divider>
+
+  </mat-dialog-content>
+</div>

@@ -1,0 +1,19 @@
+.turn-indicator{
+  position: relative;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 1em;
+  position: absolute;
+  left: calc(50% - 0.75em);
+  z-index: 1;
+  transition: left ease 0.5s, width ease 0.25s;
+  filter: invert(100%);
+}
+
+.player-label{
+  padding: 0 1em 0 1em;
+  font-family: 'Roboto Mono', monospace;
+  z-index: 2;
+  font-weight: bold;
+  mix-blend-mode: difference;
+}

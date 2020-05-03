@@ -1,0 +1,35 @@
+<mat-sidenav-container class='app-container'>
+  <mat-sidenav #sidenav class='sidenav' [mode]="mobileQuery.matches ? 'over' : 'side'"
+    [fixedInViewport]="mobileQuery.matches">
+
+    <!-- Mobile Close button-->
+    <div *ngIf="mobileQuery.matches" class="sidenav-close-button">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+
+    <!-- Navigation stuff goes here -->
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color='primary' class='app-toolbar'>
+      <div class='app-toolbar-contents'>
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>{{title}}</span>
+        <span class='app-toolbar-spacer'></span>
+        <button mat-icon-button>
+          <mat-icon>account_circle</mat-icon>
+        </button>
+      </div>
+    </mat-toolbar>
+
+    <div class='app-route-container'>
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

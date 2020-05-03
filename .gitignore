@@ -1,46 +1,46 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/dist
-/tmp
-/out-tsc
+v3/dist
+v3/tmp
+v3/out-tsc
 # Only exists if Bazel was run
-/bazel-out
+v3/bazel-out
 
 # dependencies
-/node_modules
+v3/node_modules
 
 # profiling files
-chrome-profiler-events*.json
-speed-measure-plugin*.json
+v3/chrome-profiler-events*.json
+v3/speed-measure-plugin*.json
 
 # IDEs and editors
-/.idea
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
+v3/.idea
+v3/.project
+v3/.classpath
+v3/.c9/
+v3/*.launch
+v3/.settings/
+v3/*.sublime-workspace
 
 # IDE - VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history/*
+v3/.vscode/*
+v3/!.vscode/settings.json
+v3/!.vscode/tasks.json
+v3/!.vscode/launch.json
+v3/!.vscode/extensions.json
+v3/.history/*
 
 # misc
-/.sass-cache
-/connect.lock
-/coverage
-/libpeerconnection.log
-npm-debug.log
-yarn-error.log
-testem.log
-/typings
+v3/.sass-cache
+v3/connect.lock
+v3/coverage
+v3/libpeerconnection.log
+v3/npm-debug.log
+v3/yarn-error.log
+v3/testem.log
+v3/typings
 
 # System Files
-.DS_Store
-Thumbs.db
+v3/.DS_Store
+v3/Thumbs.db
