@@ -2,11 +2,11 @@
 >*Disclaimer: **This is not a tutorial**. I am decidedly not an expert. While I do my best to strive for best practices, I do not guarantee them. I'm writing this simply as a means of journaling my own development. I will try to make this document as informative as I can. However, this should not be treated as anything more than the ramblings of a lunatic with a \[D]ill-informed opinion. If other people find this useful though − great!*
 
 # Overview
-As a programming exercise I decided to brush up on some web development. Specifically I wanted to take a closer look at HTML / JavaScript / CSS / Canvas. I needed a simple project to give them a try, and what is simpler than the age old game Tic Tac Toe? Whilst <b>this is not a tutorial <i>per se</i></b>, I have every intention of writing very detailed comments and accounts documenting my efforts. If others find it useful? Well than that's 🔥<b>LIT</b>🔥
+As a programming exercise I decided to brush up on some web development. Specifically I wanted to take a closer look at HTML / JavaScript / CSS / Canvas. I needed a simple project to give them a try, and what is simpler than the age old game Tic Tac Toe? Whilst **this is not a tutorial *per se***, I have every intention of writing very detailed comments and accounts documenting my efforts. If others find it useful? Well than that's 🔥**LIT**🔥
 
 # Goals
 1. [x] Write a playable game of Tic Tac Toe.
-1. [x] Use only HTML, CSS, and Javascript.
+1. [x] Use only HTML, CSS, and JavaScript.
 1. [x] Implement and animate a player turn indicator.
 1. [x] Make the Game responsive to screen sizes.
 1. [x] Use Canvas to draw the game board, and handle player input.
@@ -19,7 +19,7 @@ Looks great! Now let's go over how we got there ...
 # Step 1 - The HTML and CSS
 I really don't want to complicate things yet, so for now we're going to keep it simple and go with some bare bones HTML. For now we will only create 2 components - the Player Turn Indicator and Game Board. Because it's easy we'll also throw in the script initializing the game (it will throw a console error for now, but 🤷‍♀️). Here's the HTML and accompanying CSS:
 
-### The HTML
+## The HTML
 ```html
 <!DOCTYPE html>
 <html>
@@ -57,7 +57,7 @@ I really don't want to complicate things yet, so for now we're going to keep it 
 
 </html>
 ```
-### The CSS
+## The CSS
 ```css
 html{
   background: #181a1b;
@@ -133,12 +133,12 @@ We should now have something that looks like ...
 
 ![Example 1](https://kdill.ca/wp-content/uploads/2020/04/tictactoe1-300x196.jpg)
 
-We do? 🔥🔥🔥<b>GREAT!</b>🔥🔥🔥
+We do? 🔥🔥🔥**GREAT!**🔥🔥🔥
 
 # Step 2 - The Player indicator
 I know. It's a weird place to start going over the script. The player indicator will be dependant / controlled by our game in our scripts though, and it's pretty simple, so let's just knock it out of the way quickly and move on to the next step:
 
-### Player Indicator
+## Player Indicator
 ```javascript
 /**
  * Class used to represent and indicate a TicTacToe game's Player Turn.
@@ -224,18 +224,18 @@ Ok. Now that is out of the way let's move on ...
 Before we get to the meat and potatoes of the project, let us first get some modeling out of the way.
 
 ## The Rules of Tic Tac Toe
-Tic Tac Toe is a game between two players. One player is represented with the symbol <b>X</b>, and the other with the symbol <b>O</b>. The players will play on a board comprised of a empty n x n grid, where n is greater than 2. The standard default is a 3 x 3 grid. Each cell in the grid can be either <b>Empty / X / O</b>. In alternating turns the players will place their symbols on the grid. A player cannot replace the other players symbol. In order to win the game the players need to get their symbols in linear line across the entire board either by row, column, or diagonally. If all the cells are filled, and neither player has met the win condtions, the game ends in a tie.
+Tic Tac Toe is a game between two players. One player is represented with the symbol **X**, and the other with the symbol **O**. The players will play on a board comprised of a empty n x n grid, where n is greater than 2. The standard default is a 3 x 3 grid. Each cell in the grid can be either **Empty / X / O**. In alternating turns the players will place their symbols on the grid. A player cannot replace the other players symbol. In order to win the game the players need to get their symbols in linear line across the entire board either by row, column, or diagonally. If all the cells are filled, and neither player has met the win conditions, the game ends in a tie.
 
 With this information we can start modeling our game.
 
 ## Modeling
 Let's start with the TicTacToeCell. So let's review our requirements:
-1. ✅ A cell can have 3 values - <b>Empty / X / O</b>
+1. ✅ A cell can have 3 values - **Empty / X / O**
 2. ✅ A cell can be a part of a win condition.
 
 Easy!
 
-### TicTacToeCell
+## TicTacToeCell
 ```javascript
 /**
  * Struct to hold the relevant values for Tic Tac Toe
@@ -261,7 +261,6 @@ Next lets go over the TicTacToe game state. The requirements are:
 1. ✅ We need to know if the game is won.
 1. ✅ We need to know if the game is out of moves (a tie).
 
-### 
 ```javascript
 /**
  * Class used to represent the Tic Tac Toe game state.
@@ -435,7 +434,7 @@ Alrighty. So let's just briefly touch on the constructor code. First we start by
 
 Next is straight forward. We get our document element for our Canvas, and grab its context. Then we create the TicTacToePlayerTurnIndicator controller.
 
-The next three sections are resizing, drawing, and adding event listeners. We'll go over each seperately, but let's start with resizing.
+The next three sections are resizing, drawing, and adding event listeners. We'll go over each separately, but let's start with resizing.
 
 Before looking at the resize function, let's go over what this section does ...
 
@@ -486,7 +485,7 @@ First we grab the relevant elements.
 
 Second we test if we are in a landscape or portrait display by analyzing the wrapper size. We will use these measurements to scale the canvas elements up to fit the the screen.
 
-Third segment has a caveat. What's important to note is that the Canvas size, as rendered by the browser, is not necessarily its context's size. If the canvas were to, for example, fill the whole browser window and be rendered at (arbitrary number) 1920x1080 pixels, the context could have a different internal resolution like 640x480 px. <b>CSS does not adjust the contexts internal resolution.</b> To make sure everything stays nice and sharp though we adjust the contexts inner width and height. Beyond that we add a little padding to make things nice, and scale everything appropriately.
+Third segment has a caveat. What's important to note is that the Canvas size, as rendered by the browser, is not necessarily its context's size. If the canvas were to, for example, fill the whole browser window and be rendered at (arbitrary number) 1920x1080 pixels, the context could have a different internal resolution like 640x480 px. **CSS does not adjust the contexts internal resolution.** To make sure everything stays nice and sharp though we adjust the contexts inner width and height. Beyond that we add a little padding to make things nice, and scale everything appropriately.
 
 The fourth segment sets our row height and col width, which are used to place and draw our grid cells.
 
@@ -578,10 +577,10 @@ First, we update our indicator whenever we draw the board. We don't have to do a
 
 The next section 'clears' the canvas. Because it's a bitmap whenever we draw to it we reuse the existing BMP data. If we didn't clear it on each draw we would be drawing overtop of the previous data. If we were concerned about performance we could write a more optimized drawing function, where we would only redraw in the canvas regions that are explicitly being altered (IE the specific cell being affected). We may yet do that at a later date, but for now it is fine.
 
-The grid lines are drawn next. Pretty straight forward, but let's just touch on how we jave used the API:
+The grid lines are drawn next. Pretty straight forward, but let's just touch on how we have used the API:
 - We set our line width. This does exactly what it says, and changes how thick our strokes are.
 - We set our stroke color. We will use green when a cell is a winner, red when the game has tied, and otherwise we use white.
-- We begin a path. A path in canvas is a set of XY cordinates on the bmp to adjust control to.
+- We begin a path. A path in canvas is a set of XY coordinates on the bmp to adjust control to.
 - Moving a path adjusts the XY coord without affecting the stroke when used correctly.
 - We set lines in the case of grids and X, and set arcs in the case of O.
 - We 'stroke' the canvas, which draw the path as we have described it in code.
@@ -695,7 +694,7 @@ Sweet. So let's run this down:
 - We test if the game is won, advance the turn, and test if the game is won or ran out of turns.
 - We finally draw the results.
 
-Let's look at the how we test the win condtions ...
+Let's look at the how we test the win conditions ...
 
 ```javascript
 /**
@@ -811,7 +810,7 @@ It looks more complicated than it is. There are 4 separate win conditions. Eithe
 </center>
 
 # Thoughts
-This was a fun little excercise. There were a few things I think I would have changed if I was willing to complicate things more.
+This was a fun little exercise. There were a few things I think I would have changed if I was willing to complicate things more.
 
 - I would have liked to use RxJS which I'm familiar with, to create a state machine for the game. It would make reacting to state changes much simpler.
 - Add an AI to play against using the minimax algorithm. Maybe add a few difficulties
@@ -821,15 +820,11 @@ This was a fun little excercise. There were a few things I think I would have ch
 
 I may do a follow up post adding in those extra features. This is a good stopping place for now though. If you're reading this, thanks for your interest! Check out some of my other work at [kdill.ca](https://kdill.ca).
 
-Be sure to check out the source at [GitHub](https://github.com/DillK/TicTacToe).
-
-Read more posts like this on [kdill.ca](https://kdill.ca)
-
 Thanks for reading!
 
 Kev
 
-# **MIT License**
+# MIT License
 >Copyright © 2020 Kevin Dill, kdill.ca
 >
 >Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
